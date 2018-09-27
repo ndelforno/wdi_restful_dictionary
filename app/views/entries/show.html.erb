@@ -1,1 +1,9 @@
 <p>This page will display information about entry number <%= params[:id] %></p>
+
+<p> Name: <%= @entry.word %></p>
+<p> Defninition: <%= @entry.definition %></p>
+<p> Language: <%= @entry.language %></p>
+
+<%= link_to 'Edit', edit_entry_url %> | <%= link_to 'Delete', entry_path(@entry) , method: :delete %>
+
+<%= link_to 'Back', entries_url %>
